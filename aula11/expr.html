@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    País de origem: <input type="text" name="pais" id="pais">
+    <input type="button" value="Sou Brasileiro ou Estrangeiro?" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var pays = window.document.querySelector('input#pais')
+            var res = document.getElementById('res')
+            var boue = String(pays.value)
+            res.innerHTML = `<p>Seu país de origem é ${boue}</p>`
+            if (boue != Brasil) {
+                res.innerHTML += "Você é <strong>Estrangeiro!</strong>"
+            } else {
+                res.innerHTML += "Você é <strong>Brasileiro!</strong>"
+            }
+            res.innerHTML += '<p>Somos um circulo</p>'
+        }
+    </script>
+</body>
+</html>
